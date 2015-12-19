@@ -1,0 +1,98 @@
+<html>
+
+    <head>
+        <title>V</title>
+        
+        <!-- Includes -->
+        <script src="js/jquery.min.js"></script>
+        <script src="js/jquery.mousewheel.js"></script>
+        <script src="js/timeline.js"></script>
+        <link href='css/animate.css' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Raleway:900' rel='stylesheet' type='text/css'>
+        
+        <style>
+            body{
+             overflow: hidden;
+            }
+            #title{
+                position:fixed;
+                font-size:400px;
+                margin:0;
+                padding:0;
+                background: url(bg.jpg);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: rgba(0,0,0,0.6);
+            }
+            .box{
+                position:fixed;  
+                font-family:'Raleway', serif;
+                margin:0;
+                padding:0;
+            }
+            .box1{
+                top:25%;
+                left:25%;
+            }
+            .box2{
+                top:50%;
+                left:15%;
+            }
+            .box3{
+                top:75%;
+                left:25%;
+            }
+            .box4{
+                top:25%;
+                right:25%;
+            }
+            .box5{
+                top:50%;
+                right:15%;
+            }
+            .box6{
+                top:75%;
+                right:25%;
+            }
+        </style>
+        
+        <script>
+            var bgcursor = 0;
+            var max;
+            
+            function center(el){
+                el.css("left", ($(window).width() - el.width()) * 0.5);
+                el.css("top", ($(window).height() - el.height()) * 0.5);
+            }
+            
+            function initializeUI(){
+                max = parseInt($("body").first().attr("data-height"));
+                refreshUI();
+                $("body").timeline("animated swing", "animated hinge");
+                $(window).mousewheel(function(event){
+                   $("#title").css("background-position", "0 " + (-bgcursor)); 
+                });
+            }
+            
+            function refreshUI(){
+                center($("#title")); 
+                center($(".box7")); 
+                $(".fade").hide();
+            }
+            
+            $(document).ready(initializeUI);
+            
+            $(window).resize(refreshUI);
+        </script>
+    </head>
+    <body data-height="280">
+        <h1 id="title">VJ</h1>
+        <h2 class="fade box box7" data-top="0" data-bottom="100">Hi, I'm Vinit Jogani.</h2>
+        <h2 class="fade box box7" data-top="100" data-bottom="300">Check out my projects!</h2>
+        <h2 class="fade box box1" data-top="125" data-bottom="300">Codecakes</h2>
+        <h2 class="fade box box2" data-top="150" data-bottom="300">The Fizz Way</h2>
+        <h2 class="fade box box3" data-top="175" data-bottom="300">Advanced Shell</h2>
+        <h2 class="fade box box4" data-top="200" data-bottom="300">Shotify</h2>
+        <h2 class="fade box box5" data-top="225" data-bottom="300">Commander</h2>
+        <h2 class="fade box box6" data-top="250" data-bottom="300">Timeline.js</h2>
+    </body>
+</html>
