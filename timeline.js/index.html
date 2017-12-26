@@ -2,14 +2,13 @@
 
     <head>
         <title>V</title>
-        
+
         <!-- Includes -->
         <script src="js/jquery.min.js"></script>
         <script src="js/jquery.mousewheel.js"></script>
         <script src="js/timeline.js"></script>
-        <link href='css/animate.css' rel='stylesheet' type='text/css'>
         <link href='https://fonts.googleapis.com/css?family=Raleway:900' rel='stylesheet' type='text/css'>
-        
+
         <style>
             body{
              overflow: hidden;
@@ -17,82 +16,98 @@
             #title{
                 position:fixed;
                 font-size:400px;
-                margin:0;
+                top:0px;
+                left:calc(50% - 244px);
+                top:calc(50vh - 230px);
+                margin: 0;
                 padding:0;
                 background: url(bg.jpg);
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: rgba(0,0,0,0.6);
             }
             .box{
-                position:fixed;  
+                position:fixed;
                 font-family:'Raleway', serif;
+                margin-left:calc(50% - 111px);
+                margin-top:calc(50% - 14px);
                 margin:0;
                 padding:0;
             }
             .box1{
-                top:25%;
-                left:25%;
+                top:15%;
+                left:45%;
             }
             .box2{
-                top:50%;
+                top:15%;
                 left:15%;
+            }
+            .box4{
+                top:15%;
+                right:15%;
             }
             .box3{
                 top:75%;
-                left:25%;
-            }
-            .box4{
-                top:25%;
-                right:25%;
+                left:15%;
             }
             .box5{
-                top:50%;
-                right:15%;
+                top:75%;
+                right:45%;
             }
             .box6{
                 top:75%;
-                right:25%;
+                right:15%;
+            }
+            .box7 {
+              left:calc(50% - 111px);
+              top:calc(50vh - 10px);
+            }
+            .scrollDown {
+              position:fixed;
+              bottom:50px;
+              left:calc(50% - 25px);
+              background-size:50px 50px;
+              width:50px;
+              height:50px
             }
         </style>
-        
+
         <script>
             var bgcursor = 0;
             var max;
-            
+
             function center(el){
                 el.css("left", ($(window).width() - el.width()) * 0.5);
                 el.css("top", ($(window).height() - el.height()) * 0.5);
             }
-            
+
             function initializeUI(){
-                max = parseInt($("body").first().attr("data-height"));
                 refreshUI();
                 $("body").timeline("animated swing", "animated hinge");
                 $(window).mousewheel(function(event){
-                   $("#title").css("background-position", "0 " + (-bgcursor)); 
+                   $("#title").css("background-position", "0 " + (-bgcursor));
+                   $("#title").css("margin-left", -bgcursor)
                 });
             }
-            
+
             function refreshUI(){
-                center($("#title")); 
-                center($(".box7")); 
                 $(".fade").hide();
             }
-            
+
             $(document).ready(initializeUI);
-            
+
             $(window).resize(refreshUI);
         </script>
     </head>
-    <body data-height="280">
-        <h1 id="title">VJ</h1>
-        <h2 class="fade box box7" data-top="0" data-bottom="100">Hi, I'm Vinit Jogani.</h2>
-        <h2 class="fade box box7" data-top="100" data-bottom="300">Check out my projects!</h2>
-        <h2 class="fade box box1" data-top="125" data-bottom="300">Codecakes</h2>
-        <h2 class="fade box box2" data-top="150" data-bottom="300">The Fizz Way</h2>
-        <h2 class="fade box box3" data-top="175" data-bottom="300">Advanced Shell</h2>
-        <h2 class="fade box box4" data-top="200" data-bottom="300">Shotify</h2>
-        <h2 class="fade box box5" data-top="225" data-bottom="300">Commander</h2>
-        <h2 class="fade box box6" data-top="250" data-bottom="300">Timeline.js</h2>
+    <body data-height="499">
+        <h1 id="title">Timeline</h1>
+        <h2 class="fade box box7" data-top="5" data-bottom="300">Hi, I'm Vinit Jogani.</h2>
+        <h2 class="fade box box7" data-top="305" data-bottom="500">Check out my projects!</h2>
+        <h2 class="fade box box1" data-top="125" data-bottom="500">Codecakes</h2>
+        <h2 class="fade box box2" data-top="150" data-bottom="500">The Fizz Way</h2>
+        <h2 class="fade box box3" data-top="175" data-bottom="500">Advanced Shell</h2>
+        <h2 class="fade box box4" data-top="200" data-bottom="500">Shotify</h2>
+        <h2 class="fade box box5" data-top="225" data-bottom="500">Commander</h2>
+        <h2 class="fade box box6" data-top="250" data-bottom="500">Timeline.js</h2>
+        <div class="scrollDown" style="background-image: url(&quot;data:image/svg+xml;base64,PHN2ZyB3aWR0aD0nMjAwJyBoZWlnaHQ9JzIwMCcgZmlsbD0iIzAwMDAwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDkwIDkwIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA5MCA5MCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PGNpcmNsZSBjeD0iNDUiIGN5PSIxMyIgcj0iMyIvPjxwYXRoIGQ9Ik00NSwwLjVjLTguMjg0LDAtMTUsNi43MTctMTUsMTUuMDAydjI0Ljk5NkMzMCw0OC43ODMsMzYuNzE2LDU1LjUsNDUsNTUuNXMxNS02LjcxNywxNS0xNS4wMDJWMTUuNTAyICBDNjAsNy4yMTcsNTMuMjg0LDAuNSw0NSwwLjV6IE01OCw0MC40OThDNTgsNDcuNjY3LDUyLjE2OCw1My41LDQ1LDUzLjVjLTcuMTY4LDAtMTMtNS44MzMtMTMtMTMuMDAyVjE1LjUwMiAgQzMyLDguMzMzLDM3LjgzMiwyLjUsNDUsMi41YzcuMTY4LDAsMTMsNS44MzMsMTMsMTMuMDAyVjQwLjQ5OHoiLz48cGF0aCBkPSJNNTguMjkzLDU5Ljc5M0w0NSw3My4wODZMMzEuNzA3LDU5Ljc5M2MtMC4zOTEtMC4zOTEtMS4wMjMtMC4zOTEtMS40MTQsMHMtMC4zOTEsMS4wMjMsMCwxLjQxNGwxNCwxNCAgQzQ0LjQ4OCw3NS40MDIsNDQuNzQ0LDc1LjUsNDUsNzUuNXMwLjUxMi0wLjA5OCwwLjcwNy0wLjI5M2wxNC0xNGMwLjM5MS0wLjM5MSwwLjM5MS0xLjAyMywwLTEuNDE0UzU4LjY4NCw1OS40MDIsNTguMjkzLDU5Ljc5M3oiLz48cGF0aCBkPSJNNTguMjkzLDczLjc5M0w0NSw4Ny4wODZMMzEuNzA3LDczLjc5M2MtMC4zOTEtMC4zOTEtMS4wMjMtMC4zOTEtMS40MTQsMHMtMC4zOTEsMS4wMjMsMCwxLjQxNGwxNCwxNCAgQzQ0LjQ4OCw4OS40MDIsNDQuNzQ0LDg5LjUsNDUsODkuNXMwLjUxMi0wLjA5OCwwLjcwNy0wLjI5M2wxNC0xNGMwLjM5MS0wLjM5MSwwLjM5MS0xLjAyMywwLTEuNDE0UzU4LjY4NCw3My40MDIsNTguMjkzLDczLjc5M3oiLz48L3N2Zz4=&quot;);"></div>
     </body>
 </html>

@@ -1,3 +1,12 @@
+function loadcss(filename){
+        var fileref=document.createElement("link")
+        fileref.setAttribute("rel", "stylesheet")
+        fileref.setAttribute("type", "text/css")
+        fileref.setAttribute("href", filename)
+}
+
+loadcss("https://raw.github.com/daneden/animate.css/master/animate.css")
+
 $.fn.timeline = function(showclass, hideclass){
     currentObject = this;
     bgcursor = 0;
@@ -12,7 +21,7 @@ $.fn.timeline = function(showclass, hideclass){
                     console.log(parseInt(el.attr("data-top"))=== NaN);
                     if(parseInt(el.attr("data-top")) < bgcursor && parseInt(el.attr("data-bottom")) > bgcursor) {
                         el.removeClass(hideclass);
-                        el.fadeIn();   
+                        el.fadeIn();
                         el.addClass(showclass);
                     }
                     else {
@@ -27,7 +36,7 @@ $.fn.timeline = function(showclass, hideclass){
             bgcursor = max;
         }
         else {
-            bgcursor = 0;   
+            bgcursor = 0;
         }
     });
 };
