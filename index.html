@@ -28,15 +28,13 @@
 
             .window {
                 flex-direction: column;
-                display:flex;
                 max-height:100%;
                 align-items: center;
             }            
 
             .about {
                 flex:1;
-                height:100%;
-                flex-direction: row;
+                text-align: center;
             }
 
             .projects {
@@ -45,21 +43,14 @@
 
             .sm {
                 display: flex;
-                width: 60px;
-                height: 300px;
-                flex-direction: column;
-            }
-
-            .sm a {
-                text-align: center;
+                flex-direction: row;
             }
 
             .sm img {
                 width: 40px;
                 height: 40px;
                 border-radius: 5px;
-                margin: 10px;
-                background-color:white;
+                margin-right: 20px;
             }
 
             .card {
@@ -67,12 +58,29 @@
                 box-shadow: 0 0 100px rgba(0,0,0,0.4);
                 border-radius: 10px;
                 height:300px;
-                display: flex;
+                width: 800px;
+                margin-top: 20px;
+                margin-bottom: 20px;
+                display: inline-flex;
                 flex-direction: row;
+                text-align: left;
             }
 
-            .card img {
+            .card .img {
                 border-radius: 10px;
+                background-size:cover;
+                background-position:center;
+                width:300px;
+                min-width:300px;
+                height:300px;
+            }
+
+            .card .me {
+                background-image:url('images/me2.png');
+            }
+
+            .card .languages {
+                background-image:url('images/languages.png');
             }
 
             .card-content {
@@ -85,6 +93,19 @@
                 font-size: 28px !important;
                 margin-top: 10px;
             }
+            
+            #marginTop{
+                margin-top: 60px;
+            }
+            @media (max-width: 1150px) {
+                #marginTop{
+                    margin-top: 100px;
+                }
+                
+                #marginBelow {
+                    margin-bottom: 100px;
+                }
+            }
 
             
             @media (max-width: 910px) {
@@ -92,32 +113,27 @@
                     flex-direction: column;
                     height:auto;
                     width:300px;
-                    margin-top:-50px;
                     font-size:13px;
+                }
+
+                #marginBelow {
+                    margin-bottom: 100px;
+                }
+
+                #marginTop {
+                    margin-top:20px;
                 }
 
                 .card-content {
                     width:300px !important;
+                    height: 310px !important;
                     box-sizing:border-box;
-                }
-
-                .sm {
-                    height: 600px;
-                    margin-top:-50px;
-                    width:auto;
                 }
 
                 .sm img {
                     width:25px;
                     height: 25px;
-                    margin:5px;
-                }
-            }
-
-            @media (max-width:400px) {
-                .sm {
-                    position:fixed;
-                    top:85px;
+                    margin-right:10px;
                 }
             }
 
@@ -207,6 +223,12 @@
                 padding-bottom:60px;
             }
 
+            @media (min-height:800px) and (min-width: 910px) {
+                #marginTop {
+                    margin-top: calc(50vh - 320px);
+                }
+            }
+
             @media (max-width: 1100px) {
                 .body {
                     grid-template-columns: 1fr 1fr 1fr;
@@ -231,33 +253,52 @@
     <body>
         <div id="app" ref="main">
             <div class="about window" ref="about">
+
                 <button class="navigator red-hover" v-on:click="navigate('projects')" style="right:0">
                     <span class="navigator-title">Projects</span>
                     <span class="navigator-circle red-border">&gt;</span>
                 </button>
-                <div class="spacer"></div>
-                <div class="sm">
-                    <a href="https://linkedin.com/in/vinit-jogani" target="_blank">
-                        <img src="images/linkedin.png" alt="Linkedin Link">
-                    </a>
-                    <a href="https://github.com/vinitjogani" target="_blank">
-                        <img src="images/github.png" alt="Github Link">
-                    </a>
-                    <a href="http://medium.com/@vnjogani" target="_blank">
-                        <img src="images/medium.png" alt="Medium Link">
-                    </a>
-                </div>
-                <div class="card">
-                    <img class="me" src="images/me2.png" height="300" width="300" alt="">
+
+                <div class="card" ref="card1" id="marginTop">
+                    <div class="me img" alt=""></div>
                     <div class="card-content" ref="cardContent">
                         <div ref="cardText">
                             <h1>Vinit jogani</h1><br>
-                            <h6>About</h6>
+                            <h6>Interests</h6>
                             <p style="margin-top:5px;">
                                 I love building things that leverage the power of technology, and most interestingly
-                                artificial intelligence, to solve problems. I love to think about how these pursuits
-                                can also lead to a better understanding of our own cognition.
+                                artificial intelligence, to solve problems. It interests me to think about how these
+                                pursuits can also lead to a better understanding of our own cognition. I am also fond
+                                of visual art and music. I am passionate about learning new things, and I strive to
+                                relentlessly work towards my goals.
                             </p>
+                            <div class="sm">
+                                <a href="https://linkedin.com/in/vinit-jogani" target="_blank">
+                                    <img src="images/linkedin.png" alt="Linkedin Link">
+                                </a>
+                                <a href="https://github.com/vinitjogani" target="_blank">
+                                    <img src="images/github.png" alt="Github Link">
+                                </a>
+                                <a href="http://medium.com/@vnjogani" target="_blank">
+                                    <img src="images/medium.png" alt="Medium Link">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="card" ref="card2" id="marginBelow">
+                    <div class="card-content" ref="cardContent2">
+                        <div ref="cardText2">
+                            <h6>Experience</h6>
+                            <p style="margin-top:5px;">
+                                I am currently volunteering at the UofT Aerospace Team. I worked as the Publications
+                                Team Lead for the Canadian Conference on Student Leadership. I interned as a software
+                                development intern at Lemon Technologies, and before that I volunteered in the
+                                Information Design Team at the Innovation Hub. I am experienced in various programming
+                                languages and tech stacks.
+                            </p>
+
                             <h6>Education</h6>
                             <p style="margin-top:5px;">
                                 Specialist in Computer Science,<br>
@@ -265,8 +306,9 @@
                             </p>
                         </div>
                     </div>
+                    <div class="img languages" alt=""></div>
                 </div>
-                <div class="spacer"></div>
+
             </div>
             <div class="projects window" ref="projects">
                 <header>Projects</header>
@@ -301,14 +343,20 @@
                     <div class="spacer"></div>
                     <div class="project-box-container" ref="box">
                         <div class="project-box">
-                            <div class="cover-image" style="background-image:url('images/drone.png')" ref="cover"></div>
+                            <div class="cover-image" :style="{backgroundImage:'url(\'images/' + project.image + '\')'}" ref="cover"></div>
                             <div class="project-content" ref="content">
-                                <h1 class="project-title">{{project.title}}</h1>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+                                <h1 class="project-title">{{capitalize(project.title)}}</h1>
+                                <p v-html="project.description"></p>
                                 <h2>Technologies</h2>
-                                <p>Python, OpenCV</p>
+                                <p>{{project.technologies}}</p>
+                                <div v-if="project.links">
+                                    <h2>Links</h2>
+                                    <ul>
+                                        <li v-for="(link,label) in project.links">
+                                            <a :href='link' target="_blank">{{label}}</a>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                             <div class="close-button" v-on:click="close">&times;</div>
                         </div>
@@ -320,48 +368,25 @@
         <link rel="import" href="project.html">
 
         <!-- Bootstrap app -->
+        <script src="projectData.js"></script>
         <script>
             const app = new Vue({
                 el: "#app",
                 data() {
                     return {
-                        projects: [
-                            { title: "Drone Marker Detection", org: "aerospace team", lang: "Python" },
-                            { title: "Metadon", org: "independent project", lang: "JavaScript" },
-                            { title: "Tensorslow", org: "independent project", lang: "C#" },
-                            { title: "Haven", org: "independent project", lang: "Python" },
-                            { title: "LastFM GraphQL Wrapper", org: "independent project", lang: "JavaScript" },
-                            { title: "Fireguess", org: "independent project", lang: "JS/Android" },
-                            { title: "Prideas", org: "independent project", lang: "Kotlin/Android" },
-                            { title: "Dino Jump", org: "school project", lang: "Verilog" },
-                            { title: "Restman", org: "school project", lang: "Java" },
-                        ]
+                        projects: projectData
                     }
                 },
                 mounted() {
-                    const { main, cardContent, cardText } = this.$refs;
+                    const { main, card1, card2, cardContent, cardContent2, cardText, cardText2 } = this.$refs;
                     const timeline = new TimelineLite();
                     main.style.display = 'block';
-                    if (window.innerWidth >= 910) {
-                        timeline.from(cardContent, 0.5, { width: 0, ease: Power2.easeIn }, { width: 400 })
-                        timeline.from(cardText, 0.5,
-                            {
-                                opacity: 0,
-                                marginTop: -50,
-                                ease: Power2.easeIn
-                            }
-                        )
-                    } else {
-                        console.log("Mounted")
-                        timeline.fromTo(cardContent, 0.5, { height: 0, ease: Power2.easeIn }, { height: 320 })
-                        timeline.from(cardText, 0.5,
-                            {
-                                opacity: 0,
-                                marginTop: 50,
-                                ease: Power2.easeIn
-                            }
-                        )
-                    }
+                    const cardFrom = { opacity: 0, marginLeft: -30 };
+                    const cardTo = { opacity: 1, marginLeft: 0, ease: Power2.easeIn };
+                    timeline.fromTo(card1, 0.5, cardFrom, cardTo);
+                    timeline.fromTo(card2, 0.5, cardFrom, cardTo, "-=0.5");
+                    timeline.from(cardText, 0.5, { opacity: 0 });
+                    timeline.from(cardText2, 0.5, { opacity: 0 }, "-=0.5");
                 },
                 methods: {
                     navigate(screen) {
@@ -386,7 +411,7 @@
                                     opacity: 0
                                 }, {
                                     marginRight: 0,
-                                    display: "flex",
+                                    display: "block",
                                     opacity: 1,
                                     ease: Power2.easeIn
                                 }
@@ -395,7 +420,7 @@
                             timeline.fromTo(about, 0.5,
                                 {
                                     marginLeft: 0,
-                                    display: "flex",
+                                    display: "block",
                                     opacity: 1
                                 }, {
                                     marginRight: "100%",

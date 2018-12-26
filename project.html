@@ -71,6 +71,7 @@
         background-color: #ffd32a;
         border-radius: 15px 0 0 15px;
         background-size: cover;
+        background-position: center;
     }
 
     .project-content {
@@ -157,7 +158,8 @@
         margin-bottom: 0px;
     }
 
-    p {
+    p,
+    a {
         font-family: "Quicksand", sans-serif;
         text-align: left;
     }
@@ -243,6 +245,10 @@
                         opacity: 1
                     }
                 )
+            },
+            capitalize(str) {
+                str = str.toLowerCase();
+                return str[0].toUpperCase() + str.substr(1);
             }
         },
         template: '#project-box'
