@@ -19,6 +19,7 @@ var projectData = [
         title: "Haven: Social Platform",
         org: "independent project",
         lang: "Python",
+        image: 'haven.png',
         technologies: "Python, Flask, JavaScript, Vue, Firebase, Clarifai, Google Cloud Platform, MonkeyLearn, NLTK",
         description: `
         Imagine a social media platform that resonates positivity. Think about the potential misuse of social media platforms that exist out there: including cyber-bullying. These have a great deal of psychological damage, especially on middle-school students.
@@ -30,7 +31,8 @@ var projectData = [
         Moreover, the platform also offers school administrators to get a higher level overview of the mental status of their students. We intend the system to be used as the endorsed and isolated platform in a school setting, where students who frequently try to go over the negativity thresholds can be helped by their counsellors.
         `,
         links: {
-            'Video demo': 'https://www.youtube.com/watch?v=XFEDHDVWAS0&t=5s'
+            'Video demo': 'https://www.youtube.com/watch?v=XFEDHDVWAS0&t=5s',
+            'Presentation': 'https://docs.google.com/presentation/d/1P0pHvUGOnDMHyr9nuK7sNeX0eSr6iNu80uUu-dvsTS8/edit?usp=sharing'
         }
     },
     {
@@ -38,6 +40,7 @@ var projectData = [
         lang: "Figma",
         org: "school project",
         technologies: "Figma UI",
+        image: 'dee.png',
         description: `
         The Catalyst was a design project we worked on as a part of an HCI course, whose core features were letting users discover interesting events in their neighborhood, engage with other people at those events through icebreakers and games and extend their relationship after the event by keeping in touch and going to future events together.
         <br><br>
@@ -53,8 +56,12 @@ var projectData = [
         org: "independent project",
         lang: "C#",
         technologies: "C#",
+        image: 'tensorslow.png',
         description: `
-        Tensorslow is a miniature implementation of tensorflow which I made to experiment with automatic differentiation. As of now, it has a GradientDescentOptimizer and support for variables and matrices. However, C# doesn't support vectorization out of the box, so the performance is still incredibly slow to be used for any production use.
+        Tensorslow is a miniature implementation of Tensorflow which I made to learn about and experiment with automatic differentiation. As of now, it has a Gradient Descent Optimizer and support for variables and matrices. The code makes use of interfaces and object-orientation, so extending it is straightforward.
+        <br><br>
+
+        However, C# doesn't support vectorization out of the box, so the performance is still incredibly slow to be used for any production use. Yet, it is functional, and can be fast enough for fitting a simple linear model for example.
         `,
         links: {
             'Source code': 'http://github.com/vinitjogani/tensorslow'
@@ -64,6 +71,7 @@ var projectData = [
         title: "Dino Jump",
         org: "school project",
         lang: "Verilog",
+        image: 'dino.jpg',
         technologies: "Verilog, ModelSim, DE1-SOC",
         description: `
         Dino Jump is an implementation of the Chrome no-internet page's game in Verilog to run on an FPGA board as part of a Microprocessors course I took. I worked on this with a friend and built it using a control unit and a datapath that worked together responding to inputs. It helped us better appreciate the intricacies and complexities of how everthing works under the hood.
@@ -76,6 +84,7 @@ var projectData = [
         title: "IntelliPrice",
         org: "lemon technologies",
         lang: "Python",
+        image: 'intelliprice.png',
         technologies: "Python, Scikit-Learn, Matplotlib, Pandas, Plotly",
         description: `
         Diamonds are an infinitely differentiated commodity with too many salient features. This often creates discrepancies in their pricing at large diamond manufacturers since there is no real rule for determining the price of a diamond. I worked on an R&D project to train a machine learning model to better price diamonds.
@@ -97,6 +106,7 @@ var projectData = [
         title: "Diamond Week Portal",
         org: "lemon technologies",
         lang: "Php",
+        image: 'bdw.png',
         technologies: "PHP, WordPress, MySQL, Bootstrap",
         description: `
         The Bharat Diamond Week is a semiannual diamond expo with visitors from all over the world. We built a sustainable solution for registering users, accepting payments and managing events so that new events could be added and maintained by the event administrators easily. The portal also had blog and information about past events.
@@ -109,6 +119,7 @@ var projectData = [
         title: "PSR Database",
         org: "innovation hub",
         lang: "AppScript",
+        image: 'ihub.png',
         technologies: "Google Apps Script",
         description: `
         I volunteered in the Information Design Team at the Innovation Hub at the University of Toronto to create a database of all the Programs, Services and Resources offered by the UofT Student Life because no such database existed. However, the key purpose of this project was to do this in a methodical manner to learn about user's needs so that we have just the right fields, with appropriate naming and types. This involved user research, interviews, brainstorming sessions with key stakeholders, etc. so that we made sure we were considering everyone's perspectives.
@@ -121,6 +132,7 @@ var projectData = [
         title: "Prideas",
         org: "independent project",
         lang: "Android",
+        image: 'prideas.png',
         technologies: "Kotlin, Firebase",
         description: `
         Prideas was an Android app for developers to share their ideas and get feedback on them from other developers, before they spent effort building and developing the idea. Users can save ideas, and view each other's profiles. The main challenge I was trying to address was how you really like and idea, and think it'd be a really awesome app, but either something like that exists or it's not useful enough or people would just not want to use it. Prideas was a way to foresee this by shooting around ideas (e.g. for side projects) before taking them up (rate the problem), while working on them (rate the solution), and even after finishing the product (rate the product).
@@ -133,6 +145,7 @@ var projectData = [
         title: "Restman",
         org: "school project",
         lang: "Java",
+        image: 'restman.png',
         technologies: "Java, JavaFX, MVC, OOP",
         description: `
         Restman was a graphical restaurant management system with support for multiple users with different roles (servers, cooks and managers). We handled the inventory management, order management, including rejects and remake requests from customers, statistical dashboard to say sales by product, time (week/month), and more.
@@ -148,6 +161,7 @@ var projectData = [
         title: "LastFM GraphQL Wrapper",
         org: "independent project",
         lang: "JavaScript",
+        image: 'gql.png',
         technologies: "JavaScript, GraphQL, Express, ES6",
         description: `
         This project was an exploration into GraphQL as I wanted to see for myself what all the hype was about. At the time, I was working on a music app for Android, and I was using the LastFM API for looking up songs, albums and artists. However, due to the limitations of REST and the structure of the LastFM API, I found that I had to make several calls to extract all the information I needed to display.
@@ -163,6 +177,7 @@ var projectData = [
         title: "Procure",
         lang: "C#",
         org: "school project",
+        image: 'procure.png',
         technologies: "C#, ASP.NET Razor Pages",
         description: `
         Procure was a web procurement tool which reversed the workflow of a marketplace like Amazon. Instead of buyers finding products posted by sellers, suppliers could sort through procurement requests by companies. Then, the suppliers would place a bid so that the buyer gets the most competitive prices. There were also features of ratings and reviews, which gave users more insight into who they were doing business with.
@@ -193,6 +208,7 @@ var projectData = [
         title: "Metadon: Card Game",
         org: "independent project",
         lang: "JavaScript",
+        image: 'metadon.png',
         technologies: "JavaScript, MeteorJS, MongoDB",
         description: `
         Metadon is a realtime 3-player card game that I built to prolong an enjoyed family pasttime when I headed off to University. It can be played from anywhere around the world over the internet, uses Mongo as the backend for storing game data, and uses Meteor to provide all these APIs and more. Users can sign in to their account and send each other game requests while they wait to play the game.
@@ -203,9 +219,26 @@ var projectData = [
         }
     },
     {
+        title: "Firebrick",
+        lang: "C#",
+        image: 'firebrick.png',
+        org: "independent project",
+        technologies: "C#, Firebase, Angular v1",
+        description: `
+        Firebrick was a surveillance application with a client application and a web dashboard. The client was made in Windows Forms that collected keystrokes, screenshots, and app usage data. 
+        <br><br>
+
+        All the information was synced to the database and displayed in real-time on an Angular web dashboard using Firebase (realtime database and storage). This included some visualizations (e.g. donut chart for app usage) and filtering options (by date/time and user). 
+        <br><br>
+
+        It had many configuration options, including setting screenshot interval, upload interval, and individual features could be used in isolation. For example, employees' usage of different apps, including idle time, could be monitored without screenshots and keystrokes.
+        `
+    },
+    {
         title: "FireGuess",
         org: "independent project",
         lang: "Android",
+        image: 'fireguess.png',
         technologies: "JavaScript, jQuery, Cordova, PhoneGap, Google Translate",
         description: `
         Fireguess was my first Android app where users were shown the name of a random song from the Billboard Top 50 translated to Hindi, and they were to guess the real name of the song. It was an entertaining and funny game built in pure JavaScript using calls to the Google Translate API.
@@ -213,14 +246,5 @@ var projectData = [
         links: {
             'Source code': 'https://github.com/vinitjogani/fireguess'
         }
-    },
-    {
-        title: "Firebrick",
-        lang: "C#",
-        org: "independent project",
-        technologies: "C#, Firebase",
-        description: `
-        Firebrick was a surveillance application in Windows Forms that collected keystrokes, screenshots, and app usage data. All the information is synced to the database and displayed in real-time on a web dashboard using Firebase (realtime database and storage). This included some visualizations (e.g. donut chart for app usage) and filtering options (by date/time and user). 
-        `
-    },
+    }
 ]; 
