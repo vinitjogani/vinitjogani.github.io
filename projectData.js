@@ -78,7 +78,10 @@ var projectData = [
         <br><br>
 
         There were randomly generated blocks, whose position and delay was determined using a Linear Feedback Shift-Register. The user could jump, move and duck. The blocks sped up as your score increased, and there was also a high-score counter. The key challenge in this project was the animation of sprites. Most interestingly, we implemented acceleration and deceleration of the dino during the jump phase, which was surprisingly complicated.
-        `
+        `,
+        links: {
+            'Source code': 'https://github.com/vinitjogani/dino-jump'
+        }
     },
     {
         title: "IntelliPrice",
