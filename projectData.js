@@ -1,5 +1,21 @@
 var projectData = [
     {
+        title: "Affective Computing",
+        org: "data science team",
+        lang: "Python",
+        technologies: "Python, OpenCV, Tensorflow/Keras",
+        image: "affective.png",
+        description: `
+        I am currently working in a group within the Data Science Team at the University of Toronto for detecting human emotions within pictures and videos. We trained a CNN on the training dataset, and used OpenCV's Haar Cascade Classifier for detecting faces.
+        <br><br>
+
+        We are working on cool applications of this model. For example, we are working on building an app where you can click a selfie and it plays a song based on the emotions in that selfie. A useful application of this can be detecting mental health illnesses from social media, if combined with sentiment analysis.
+        <br><br>
+
+        It is still a work in progress, and we continue to improve the model accuracy as well as its applications. The model was trained on Google Colab.
+        `
+    },
+    {
         title: "Drone Marker Detection",
         org: "aerospace team",
         lang: "Python",
