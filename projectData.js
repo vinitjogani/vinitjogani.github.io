@@ -1,5 +1,25 @@
 var projectData = [
     {
+        title: "Game Of Poles",
+        org: "school project",
+        lang: "C#",
+        technologies: "C#, Unity, VR",
+        image: "gop.png",
+        description: `
+        I was the team lead of Game of Poles for the game design course. It is a VR-based puzzle shooter where you use a motion-controlled bow and polarizing arrows to magnetize objects in the scene to defeat enemies and overcome obstacles.
+        <br><br>
+
+        We presented this at the Level Up Showcase in Toronto and received great response. People enjoyed the chaotic scenes where they could send everything flying across the rooms. We have everything documented on the development blog as far as the process goes.
+        <br><br>
+
+        While the VR presented some challenges, I was amazed to see how much the APIs have been standardized and it's exciting to think about all the applications for education and mental health for this technology!
+        `,
+        links: {
+            'Design blog': 'https://medium.com/grayball',
+            'Demo': 'https://www.youtube.com/watch?v=gYRyKNE6VDc'
+        }
+    },
+    {
         title: "Affective Computing",
         org: "data science team",
         lang: "Python",
