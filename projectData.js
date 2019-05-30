@@ -120,6 +120,27 @@ var projectData = [
         }
     },
     {
+        title: "Course Finder Pro",
+        org: "independent project",
+        lang: "JavaScript",
+        image: 'coursefinder.png',
+        technologies: "VueJS, Python",
+        description: `
+        I built course finder pro to fix a really simple problem that I personally waster hours on: the existing course search at University of Toronto
+        overlooked some obvious considerations. For instance, it did not check for timetable conflicts when showing the course - a fairly important
+        concern when you're taking enough courses so that something or the other keeps conflicting. Moreover, when there were a lot of courses already
+        on waitlist, it was really hard to find what to take.
+        <br><br>
+
+        This system uses the Cobalt API for querying university courses and filters them based on pre-requisites, timetable conflicts and remaining
+        spots, on top of the usual breadth and department filtering that the existing search provides.
+        `,
+        links: {
+            'Live demo': 'https://coursefinderpro.herokuapp.com/',
+            'Source code': 'https://github.com/vinitjogani/course-finder-pro'
+        }
+    },
+    {
         title: "IntelliPrice",
         org: "lemon technologies",
         lang: "Python",
